@@ -1,0 +1,30 @@
+======= BALIKÇI OOP ÖDEVİ =====
+======= 04 Haziran 2024   =====
+
+Görev: 
+Bir balıkçının çeşitli ekipmanlarla balık tutmasını simüle eden bir Java programı yazınız. Bu ödevde polimorfizm kavramını kullanarak farklı balık tutma ekipmanları ve bu ekipmanların nasıl kullanıldığını modelleyeceksiniz. 
+
+Gereksinimler: 
+ 1. **Temel Sınıflar ve Arayüzler:**
+- `Balikci` adlı bir sınıf oluşturun. Bu sınıf balık tutma işlemini gerçekleştirecek.
+- `Ekipman` adlı bir arayüz oluşturun. Bu arayüzde `kullan` adlı bir metot tanımlayın.
+
+ 2. **Balık Tutma Ekipmanları:**
+- `BalikTutmaEkipmani` adlı abstract bir sınıf oluşturun ve `Ekipman` arayüzünü uygulayın. Bu sınıf, ortak ekipman özelliklerini ve metodlarını içermelidir.
+- `Olta`, `Ag`, ve `Zipkin` adlı sınıflar oluşturun ve `BalikTutmaEkipmani` sınıfını miras alın. Bu sınıflar `kullan` metodunu kendilerine özgü şekilde uygulamalıdır. 
+
+ 3. **Balıkçı Sınıfı:**
+- `Balikci` sınıfında `BalikTutmaEkipmani` türünden bir dizi (array) veya koleksiyon (collection) kullanarak balıkçının sahip olduğu ekipmanları saklayın.
+- `Balikci` sınıfına `ekipmanEkle` metodu ekleyin. Bu metod, balıkçının yeni bir ekipman eklemesini sağlamalıdır.
+- `Balikci` sınıfına `balikTut` metodu ekleyin. Bu metod, balıkçının tüm ekipmanlarını kullanarak balık tutma işlemini gerçekleştirmelidir.
+
+ 4. **Polimorfizm Kullanımı:**
+- `Balikci` sınıfındaki `balikTut` metodunda polimorfizmi kullanarak, her ekipman türü için `kullan` metodunu çağırın. 
+
+Çıktı Örneği:
+Program çalıştırıldığında, balıkçının sahip olduğu ekipmanları kullanarak balık tutma işlemlerini aşağıdaki gibi ekrana yazdırmalıdır:
+
+```
+Olta ile balık tutuluyor...
+Ağ ile balık tutuluyor...
+Zıpkın ile balık tutuluyor...
